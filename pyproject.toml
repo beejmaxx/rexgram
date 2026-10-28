@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rexgram"
+version = "0.1.0"
+description = "Talk to the coding agents running in your Rex panes from Telegram."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["rex", "telegram", "claude-code", "codex", "agents", "terminal"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Terminals",
+]
+
+[project.urls]
+Homepage = "https://github.com/beejmaxx/rexgram"
+Issues = "https://github.com/beejmaxx/rexgram/issues"
+
+[project.scripts]
+rexgram = "rexgram.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rexgram"]
